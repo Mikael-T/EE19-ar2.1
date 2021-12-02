@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Loopa</h1>
+        <button onclick="loopa()">Loopa!</button>
+        <p></p>
+    </div>
+</body>
+<script>
+
+const eResultat = document.querySelector("p"); /* skriver p eftersom jag vill peka ut <p> </p> */
+
+    function loopa() {
+        
+        /* upprepa koden 16 gpnger = loopa 16 gånger */
+        var gånger = 1;
+        while (gånger < 17) {
+            eResultat.innerHTML += gånger + "<br>";
+            gånger++;
+        }
+
+    }
+</script>
+</html>

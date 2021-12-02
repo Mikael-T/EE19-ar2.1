@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prov 1d</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Skapa sms</h1>
+        <h2>Input</h2>
+        <label><a target="_blank" href="https://getemoji.com/">Välj emoji</a> <input class="emoji" type="text"></label>
+        <label>Ange antal <input class="antal" type="text"></label>
+        <label>Ange texten <input class="texten" type="text"></label>
+        <button class="skicka">Skicka</button>
+        <button class="slumpa">Slumpa emoji</button>
+
+        <h2>Output</h2>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+
+        /* Hitta textrutan */
+        const eRutaEmoji = document.querySelector(".emoji")
+        const eRutaAntal = document.querySelector(".antal")
+        const eRutaText = document.querySelector(".texten")
+        const eRutaSvar = document.querySelector("textarea")
+        const btnSkicka = document.querySelector(".skicka")
+        const btnSlumpa = document.querySelector(".slumpa")
+
+
+
+        
+        /*Ger en function till knappen skicka  */
+        btnSkicka.addEventListener("click", function () {
+            
+    
+            
+
+
+
+            eRutaSvar.value = eRutaText.value + "\n" + eRutaEmoji.value;
+
+            
+            
+        })
+
+    </script>
+</body>
+</html>

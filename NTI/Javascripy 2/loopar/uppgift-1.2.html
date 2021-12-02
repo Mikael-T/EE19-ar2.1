@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uppgift 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Uppgift 1.2</h1>
+        <button onclick="skapa()">Skapa Lösenord</button>
+        <button onclick="login()">Logga in</button>
+    </div>
+    <script>
+        function skapa() {
+            var password = prompt("Skriv in ett lösenord")
+        }
+        function login() {
+
+            while (true) {
+                var Attempt = prompt("Skriv in ditt lösenord som du skapade för att logga in")
+                
+                if (attempt == password) {
+                    alert("Du är inloggad!")
+                    break;
+                }
+                 else {
+                    alert("Fel lösenord")
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

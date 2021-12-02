@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oändlig loop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Oändlig loop</h1>
+        <button onclick="loopa()">Tryck för evig pain!</button>
+    </div> 
+    <script>
+        function loopa() {
+            var slumptal = "42";
+        
+            /* Köra en oändlig loop */
+        while (true) {
+            
+
+            var gissning = prompt("Vad är menigen med livet?")
+
+            if (gissning == slumptal) {
+            alert("Great, du är väldigt woke");
+            break;
+        } else {
+            alert("Nope, försök igen!")
+        }
+
+        }
+    }
+
+    </script>
+</body>
+</html>

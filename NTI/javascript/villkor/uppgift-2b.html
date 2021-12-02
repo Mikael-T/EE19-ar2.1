@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fixa din lampa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Fungerar din lampa?</h1>
+
+    </div>
+   <script>
+        var svar1 = prompt("Är lampan inkopllad? y/n")
+
+        if (svar1 == "y") {
+            var svar2 = prompt("Är glödlampan utbränd? y/n")
+            if (svar2 == "y") {
+                alert("Ersätt glödlampan")
+            } else {
+                alert("Köp en ny lampa")
+            }
+        } else {
+            alert("Koppla in lampan")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prov2b</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="prov-2b.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Mixit</h1>
+        <h3>Input</h3>
+        <label>
+            Välj ett tal (1-10)
+            <input autofocus class="form-control tal" type="text">
+        </label>
+        <label>
+            Välj ett djur (flera)
+            <input class="form-control djur" type="text">
+        </label>
+        <label>
+            Välj en stad
+            <input class="form-control stad" type="text">
+        </label>
+        <label>
+            Välj ett adjektiv
+            <input class="form-control adjektiv" type="text">
+        </label>
+
+        <button class="btn btn-primary mixa">Skriv ut</button>
+        <button class="btn btn-success föreslå">Föreslå</button>
+
+        <h3>Output</h3>
+        <label class="rader">
+            Resultat
+            <p class="alert-primary resultat"></p>
+        </label>
+        <label class="rader">
+            Varning
+            <p class="alert-warning varning"></p>
+        </label>
+
+        <script defer src="prov2b.js"></script>
+    </div>
+</body>
+</html>

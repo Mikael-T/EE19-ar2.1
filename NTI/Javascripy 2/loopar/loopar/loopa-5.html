@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oändlig loop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Oändlig loop</h1>
+        <button onclick="loopa()">Tryck för evig pain!</button>
+    </div>
+    <script>
+        function loopa() {
+            var varv = 5;
+
+            /*Loopa 10 gånger  */
+            /* 0, 1, 2, 3, ,4 ,5 ,6 ,7 ,8 ,9 ,10 */
+            while (varv < 15) {
+                console.log("varv", varv)
+                varv++;
+            }
+    }
+    </script> 
+</body>
+</html>

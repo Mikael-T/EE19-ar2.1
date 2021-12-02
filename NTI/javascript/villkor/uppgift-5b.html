@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Svenska Högtider</h1>
+    </div>
+   <script>
+       var svar1 = prompt("Äter man sill? y/n")
+
+       if (svar1 == "y") {
+           var svar2 = prompt("Dricker man must? y/n")
+           
+           if (svar2 == "y") {
+               var svar3 = prompt("Kollar man TV kl.15.00? y/n")
+               if (svar3 == "y") {
+                alert("Det är Jul!")   
+               } 
+               /* else för svar3  */else {
+                   alert("Det är Påsk!")
+               }
+           } 
+           /* else för svar2 */ else {
+            alert("Det är Midsommar!")    
+           }
+       } 
+     /* else för svar1 */  else {
+        var svar4 = prompt("Är fika viktigt? y/n")
+        if (svar4 == "y") {
+          var svar5 = prompt("Vispgrädde? y/n")  
+          if (svar5 == "y") {
+              var svar6 = prompt("Sylt till? y/n")
+              if (svar6 == "y") {
+                alert("Det är Våffeldagen!")  
+              } 
+              /* else för svar6 */ else {
+                  alert("Det är Fettisdagen!")
+              }
+          } 
+          /* else för svar5 */ else {
+             alert("Det är Kanelbullens dag!")
+          } 
+        } 
+        /*else för svar4  */ else {
+            var svar7 = prompt("Importera från USA av köpmän? y/n")
+            if (svar7 == "y") {
+                var svar8 = prompt("Köper man rosor eller pumpor?")
+                if (svar8 == "rosor") {
+                    alert("Det är Alla hjärtans dag!")
+                } 
+                /* else för svar8 */else  {
+                    alert("Det är Halloween!")
+                }
+            } 
+            /* else för svar7 */ else {
+                var svar9 = prompt("Är man bakfull? y/n")
+                if (svar9 == "n") {
+                    var svar10 = prompt("Vet folk orsaken till firandet? y/n")
+                    if (svar10 == "y") {
+                        alert("Det är Kristi himmelsfärd")
+                    } 
+                    /*else för svar10  */ else {
+                        alert("Det är Nationaldagan!")
+                    }
+                } 
+                /* else för svar9 */else {
+                 var svar11 = prompt("Kallar man på Ivanhoe? y/n")   
+                 if (svar11 == "y") {
+                     alert("Det är Nyårsdagen!")
+                 } 
+                 /* else för svar11 */ else {
+                     alert("Det är Första Maj!")
+                 }
+                }
+            }
+        }
+       }
+
+    </script>
+</body>
+</html>

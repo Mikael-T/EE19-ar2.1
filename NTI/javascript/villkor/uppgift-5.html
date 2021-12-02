@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uppgift 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        /* För att få delta i en tävling måste man vara mellan 16 och 19 år gammal.
+        
+         Skapa ett skript som frågar användaren hur gammal hen.
+         Skriptet skriver sedan ut om hen får delta i tävlingen och om hen är för ung eller om hen är för gammal. */
+
+        var ålder = prompt("Vad är din ålder?");
+
+        if (ålder < 16) {
+            alert("Du är för ung för att delta.");
+
+        }
+         else if (ålder > 19) {
+            alert("Du är för gammal för att delta.");
+
+        }
+         else {
+            alert("Du är perfekta åldern för att joina USSR. Welcome to the Team!")
+        }
+    </script>
+</body>
+</html>

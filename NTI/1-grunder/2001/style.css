@@ -1,0 +1,12 @@
+body {
+  background-color: black; 
+   background-image: url(C:\Github\EE19-ar2\1-grunder\2001\Bilder);
+}
+
+h1 {
+    font-fami   ly: 'Roboto Condensed', sans-serif;
+    font-size: 80px;
+color: white;
+width: 600px;
+margin-left: 100px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h3>Ange rumstyp</h3>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="enkel">Enkelrum 800:-</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="dubbel"> Dubbelrum 1200:</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="familj"> Familjerum 1500:-</div>
+        </label>
+
+<h3>Ange tillägg</h3>
+        <label>
+            <br>
+            <div><input type="checkbox" class="wifi"> Wifi</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="checkbox" class="parkering"> Parkering</div>
+        </label>
+
+        </label>
+        
+        <button>Räkna Ut</button>
+
+
+        <h2>Uppskattad kostnad</h2>
+         <label>Total pris <input type="text" class="total"></label>
+    </div>
+    <script>
+        /* Hitta elementen vi kommer använda */
+
+        const rutaNamn = document.querySelector(".namns");
+        const rutaAntal = document.querySelector(".antal");
+
+        const radioEnkel = document.querySelector(".enkel");
+        const radioDubbel = document.querySelector(".dubbel");
+        const radioFamilj = document.querySelector(".familj");
+    
+        const rutaWifi = document.querySelector(".wifi");
+        const rutaParkering = document.querySelector(".parkering");
+
+        const knappen = document.querySelector(".button");
+      
+
+        const rutaTotal = document.querySelector(".total");
+
+
+
+        /* Globala varianler */
+            var rumPris = 0, wifi = 0, parkering = 0;
+
+        radioEnkel.addEventListener("click", function() {
+            var rumPris = 800;
+            knappen.disabled = false;
+        })
+
+        radioDubbel.addEventListener("click", function() {
+            var rumPris = 1200;
+            knappen.disabled = false;
+        })
+        
+        radioFamilj.addEventListener("click", function() {
+            var rumPris = 1500;
+            knappen.disabled = false;
+        })
+
+        knappen.addEventListener("click", function() {
+            console.log("Pris för rummet =", rumPris)            
+        })
+
+        /* När man klicka på knappen */
+        knappen.addEventListener("click", function() {
+ 
+            var antal = rutaAntal.value;
+
+
+
+
+
+            var total = antal * rumPris;
+
+            if (kryssWifi.checked) {
+                total += 100;
+            }
+            
+            if (kryssWifi.checked) {
+                total += 50;
+            }
+
+        })
+    </script>
+</body>
+</html>

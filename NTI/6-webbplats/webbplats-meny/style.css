@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Sansita+Swashed:wght@300&display=swap');
+
+/* CSS HEX */
+:root {
+    --navy-blue: #03045eff;
+    --dark-cornflower-blue: #023e8aff;
+    --star-command-blue: #0077b6ff;
+    --blue-green: #0096c7ff;
+    --cerulean-crayola: #00b4d8ff;
+    --sky-blue-crayola: #48cae4ff;
+    --sky-blue-crayola-2: #90e0efff;
+    --blizzard-blue: #ade8f4ff;
+    --powder-blue: #caf0f8ff;
+}
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px;
+
+}
+
+.kontainer {
+    background: #023e8aff;
+    margin: auto;
+    width: 900px;
+    padding: 40px;
+}
+
+.kontainer h1 {
+    font-family: 'Sansita Swashed', cursive;
+    color: #caf0f8ff;
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.kontainer h2 {
+    font-family: 'Sansita Swashed', cursive;
+    text-align: center;
+    margin: 20px;
+
+
+}
+
+.kontainer ul {
+    font-family: 'Comfortaa', cursive;
+    list-style-type: none;
+    text-align: center;
+}
+
+.kontainer ul li {
+    color: #0077b6ff;
+    display: inline;
+}
+
+.kontainer ul a {
+    background-color: #03045eff;
+    color: #0096c7ff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.kontainer p {
+    font-family: 'Comfortaa', cursive;
+    margin: 20px;
+ 
+}
+
+.kontainer p a {
+    font-family: 'Comfortaa', cursive;
+    background-color: #ade8f4ff;
+    text-decoration: none;
+}
+
+.kontainer figure {
+    width: 500px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgba(153, 153, 153, 0561);
+}
+
+.kontainer figure img {
+    width: 100%;
+}
+
+.kontainer figure figcaption {
+    font-family: 'Comfortaa', cursive;
+}
+
+.kontainer ul a:hover {
+    background-color: #ade8f4ff;
+    box-shadow: none;
+}
+.kontainer ul a.aktiv{
+    background:#00b4d8ff ;
+}
