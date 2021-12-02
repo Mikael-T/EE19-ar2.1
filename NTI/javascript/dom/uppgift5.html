@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Uppgift 5</h1>
+        <!-- Skapa en webbsida med en knapp.
+        När användaren klickar på knappen visas ett valfritt Youtube-klipp.
+        (Ej som bakgrundsbild). -->
+<button onclick="ytVideo()">Tryck för att se THE CRAB DANCE!</button>
+    </div>
+    <script>
+        function ytVideo() {
+            document.body.innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/LDU_Txk06tM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        }
+
+    </script>
+</body>
+</html>

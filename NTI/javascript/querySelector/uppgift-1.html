@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hemlig nummer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Hemlig nummer?</h1>
+        
+        <label> Vad är 20/4? <input class="gissning" type="text"></label>
+
+        <h2>Input</h2>
+
+        <button onclick="gissa()">Se om det är rätt</button>
+
+        
+        <label>Svar </label><input class="svar" type="text">
+
+    </div>
+    <script>
+        /* Hitta input-ruttorna */
+        const eRutaGissning = document.querySelector(".gissning");
+        const eRutaSvar = document.querySelector(".svar")
+
+        /* Läs av gissningen */
+
+        function gissa() {
+            
+        
+        var gissning  = eRutaGissning.value;
+
+        /* Om användaren har gissat rätt visa mobilnr */
+        if (gissning == "5") {
+            eRutaSvar.value = "112, Aina kommer för dig"
+        } else {
+            eRutaSvar.value = "Fel svar! Försök igen"
+        }
+    }
+
+    </script>
+</body>
+</html>

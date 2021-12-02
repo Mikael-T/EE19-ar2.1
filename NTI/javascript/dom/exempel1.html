@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Mixtra med webbsidan</h1>
+        <button onclick="nyTitle()">Ny title</button>
+        <button onclick="nyFärg()">Ändra färgen till grön</button>
+        <button onclick="nyFärg1()">Ändra färgen tillbaka</button>
+        <button onclick="boom()">Boom!</button>
+    </div>
+    <script>
+        function nyTitle(){
+            console.log("Det funkar")
+
+            /* Ändra på titeln */
+            document.title = "Tjenare!"
+        }
+
+        function nyFärg() {
+         document.body.style.cssText = "background: green; color: green";   
+        }
+        
+        function nyFärg1() {
+         document.body.style.cssText = "background: #F9F6EB; ";   
+        }
+        function boom() {
+            document.body.innerHTML = "<h1>SPRING! BOMBEN KOMMER DETONERAS!</h1> <img src=\"./Bilder/bomb.jpg\" alt=\"bomb\"> <button onclick=\"explosion()\">Spring!</button> ";
+
+        }
+        function explosion() {
+            document.body.innerHTML = "<img src=\"./Bilder/explosion.jpg\"alt=\"explosion\">";
+        }
+    </script>
+
+    
+    </body>

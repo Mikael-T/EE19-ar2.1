@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer"> 
+        <button onclick="smiley()">Tryck För En Random Emoji </button>
+        <input disabled type="text">
+    </div>
+    <script>
+        const elementinput = document.querySelector("input");
+
+        function smiley() {
+            var smileytal = Math.floor(Math.random() * 6)
+
+            elementinput.value = "Din emoji för idag är: " + smileytal
+
+            switch (smileytal) {
+                case 0:
+                elementinput.value ="😃"
+                    break;
+                case 1:
+                     elementinput.value ="😇"
+                    break;
+                case 2:
+                     elementinput.value ="🤪"
+                    break;
+                case 3:
+                     elementinput.value ="😒"
+                    break;
+                case 4:
+                     elementinput.value ="☹️"
+                    break;
+            
+                default:
+                     elementinput.value ="💩"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

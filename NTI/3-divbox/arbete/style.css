@@ -1,0 +1,28 @@
+head {
+
+}
+body {
+    background-image:"./Bilder/Arbete-1.jpg";
+}
+div {
+background: white;
+width: 600px;
+padding: 50px;
+
+}
+h1 {
+font-size: 80px
+}
+p {
+font-family:;
+font-size: 30px;
+margin-bottom: 20px;
+}
+br {
+
+}
+a {
+    text-decoration: none;
+    color: #dd9000;
+   
+}

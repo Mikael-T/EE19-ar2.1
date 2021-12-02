@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Kul på webbsida</h1>
+        <img onmousewheel="visaHej()" src="./bilder/Galaxy.jpg" alt="en galax">
+    </div>
+    <script>
+
+        function visaHej() {
+            alert("Hej på dig!")
+            document.title = "Hej på dig!"
+            document.body.style.backgroundColor = "red"
+            document.body.style.color = "green"
+        }
+    </script>
+</body>
+</html>
