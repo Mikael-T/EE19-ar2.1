@@ -5,7 +5,7 @@
 }
 
 .background {
-    background-color: #0000006e;
+    background-color: #0F4E63;
     height: 100vh;
     padding-top: 1px;
 }
@@ -49,11 +49,11 @@
 }
 
 .spelareX {
-    color: #0ba361 ;
+    color: #F77431 ;
 }
 
 .spelareO {
-    color: #427fe9;
+    color: #BED753;
 }
 
 .controls {

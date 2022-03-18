@@ -77,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /* Checkar om en ruta har en value eller inte. Om den har en value returnar den false annars returnar den true. Gör det för jag vill att spelare bara ska kunna lägga ut på rutor som är tomma.*/
     const isValidAction = (ruta) => {
-        if (ruta.innerText === 'X' || ruta.innerText === 'o') {
+        if (ruta.innerText === 'X' || ruta.innerText === 'O') {
             return false;
         }
 
