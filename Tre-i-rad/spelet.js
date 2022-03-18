@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
     /* Array i en array för att skapa winning conditions*/
-    const winningCondition = [
+    const winningConditions = [
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
@@ -33,15 +33,41 @@ window.addEventListener("DOMContentLoaded", () => {
         [2, 4, 6]
     ];
 
+    /* Checkar om vi har en vinnare genom att loopa igenom våran winning condition array. Array i en array som håller tre nummer (represeneterar rutorna) */
+    function handleResultValidation() {
+        let roundWon = false;
+        for (let i = 0; i <= 7; i++) {
+            const winCondition = winningConditions[i];
+            const a = board[winCondition[0]];
+            const b = board[winCondition[1]];
+            const c = board[winCondition[2]];
+            if (a === '' || b === '' || c === '') {
+                continue;
+            }
+            if (a === b && b === c) {
+                roundWon = true;
+                break;
+            }
+        }
+
+        if (roundWon) {
+            announce(currentPlayer === 'X' ? SPELAREX_WON : SPELAREO_WON);
+            isGameActive = false;
+            return;
+        }
+
+        if (!board.includes(''))
+            announce(TIE);
+    }
 
     const announce = (type) => {
-        /* Switch statement väljer mellan de här blocken beroende på type */
+        /* Switch statement väljer mellan de här blocken beroende på type. Efter det ta bort hide  */
         switch (type) {
-            case PLAYERO_VANN:
+            case SPELAREO_WON:
                 announcer.innerHTML = 'Player <span class="player0">0</span> Won';
                 break;
-            case PLAYERX_VANN:
-                announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+            case SPELAREX_WON:
+                announcer.innerHTML = 'Player <span class="SPELAREX_WON">X</span> Won';
                 break;
             case TIE:
                 announcer.innerHTML = 'Tie';
@@ -49,14 +75,27 @@ window.addEventListener("DOMContentLoaded", () => {
         announcer.classList.remove('hide');
     };
 
+    /* Checkar om en ruta har en value eller inte. Om den har en value returnar den false annars returnar den true. Gör det för jag vill att spelare bara ska kunna lägga ut på rutor som är tomma.*/
+    const isValidAction = (ruta) => {
+        if (ruta.innerText === 'X' || ruta.innerText === 'o') {
+            return false;
+        }
+
+        return true;
+    };
+
+    const updateBoard = (index) => {
+        board[index] = currentPlayer;
+    }
+
 
 
     /* Tar bort html classen och ändrar till nästa spelare */
     const changePlayer = () => {
-        playerDisplay.classList.remove(`player${currentPlayer}`);
+        spelareDisplay.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        playerDisplay.innerText = currentPlayer;
-        playerDisplay.classList.add(`player${currentPlayer}`);
+        spelareDisplay.innerText = currentPlayer;
+        spelareDisplay.classList.add(`player${currentPlayer}`);
     }
 
 
@@ -70,6 +109,25 @@ window.addEventListener("DOMContentLoaded", () => {
             changePlayer();
         }
     }
+
+    /* Skapar en resetboard hook genom att sätta alla rutor till tomma och ändra value tillbaka på isGameActive till true. Eftersom X startar alltid så gör jag en if sats om O är current player byter den till X. ForEach tar bort alla player class relaterade på varje ruta. */
+    const resetBoard = () => {
+        board = ['', '', '', '', '', '', '', '', ''];
+        isGameActive = true;
+        announcer.classList.add('hide');
+
+        if (currentPlayer === 'O') {
+            changePlayer();
+        }
+
+        ruta.forEach(ruta => {
+            ruta.innerText = '';
+            ruta.classList.remove('SPELAREX_WON');
+            ruta.classList.remove('SPELAREO_WON');
+        })
+    }
+
+
     /* Attachar en addeventlistener till varje ruta  */
     ruta.forEach((ruta, index) => {
         ruta.addEventListener('click', () => userAction(ruta, index));
